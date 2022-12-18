@@ -826,15 +826,15 @@ footer.instagram:hover {
   font-family: inherit;
 }
 .modal-form {
-  background-color: aqua;
 }
 .label {
   display: block;
   font-size: 12px;
   color: var(--gray);
   line-height: 1.17;
-  margin-top: 12px;
+  margin-top: 10px;
   margin-left: 40px;
+  padding-bottom: 4px;
 }
 .modal > p {
   font-size: 20px;
@@ -850,8 +850,15 @@ footer.instagram:hover {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-
+  margin-bottom: 10px;
   margin-left: 0px;
+}
+.input-one:hover {
+  border-color: var(--blue);
+}
+.input-one:focus {
+  /*nie działa*/
+  border-color: var(--blue);
 }
 .input-two {
   display: block;
@@ -859,7 +866,7 @@ footer.instagram:hover {
   height: 40px;
   width: 448px;
   border-radius: 4px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   margin-left: 0px;
 }
 .input-three {
@@ -868,7 +875,7 @@ footer.instagram:hover {
   width: 448px;
   height: 40px;
   border-radius: 4px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   margin-left: 0px;
 }
 .textarea {
@@ -883,10 +890,22 @@ footer.instagram:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .chceckbox-label p {
   line-height: 1.71;
   font-size: 14px;
   letter-spacing: 1px;
   color: var(--gray);
+  margin-top: 20px;
+}
+.submit-modal-btn {
+  margin-left: 164px;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 4px;
+  border: 1px solid var(--blue);
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
 }
