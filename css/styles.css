@@ -699,11 +699,14 @@ footer.instagram:hover {
   background-color: var(--white);
 
   position: relative;
-  transition-duration: 1.5s;
+  transition: 1.5s ease-in-out;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden .modal {
   transform: translateX(30%) translateY(30%) rotate(90deg);
 }
+
 .close-btn {
   width: 30px;
   height: 30px;
@@ -718,40 +721,7 @@ footer.instagram:hover {
   align-items: center;
   cursor: pointer;
 }
-/* .box {
-  position: relative;
-  overflow: hidden;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translatey(100%);
-  transition: transform 250ms ease;
-}
-.box:hover .overlay {
-  transform: translatey(0);
-}
-.overlay p {
-  color: var(--white);
-  font-size: 18px;
-  line-height: 1.55;
-}
-.overlay-box {
-  width: 370px;
-  height: 294px;
-  padding-top: 49px;
-  padding-left: 29px;
-  background-color: var(--secondBlue);
-  padding-right: 45px;
-} */
-/* czym sie zajmujemy */
 
-/* .line {
-  position: relative;
-} */
 .line::after {
   content: '';
   border: 2px solid var(--blue);
@@ -810,6 +780,7 @@ footer.instagram:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 30px;
 }
 .submit-btn {
   margin-left: 12px;
@@ -819,23 +790,21 @@ footer.instagram:hover {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-color: var(--blue);
+
   color: var(--white);
-  letter-spacing: 2px;
+  letter-spacing: 0.06em;
   font-weight: 700;
   line-height: 1.87;
   font-family: inherit;
+  position: relative;
 }
-.modal-form {
+.btn-icon {
+  fill: var(--white);
+  position: absolute;
+  top: 14px;
+  right: 20px;
 }
-.label {
-  display: block;
-  font-size: 12px;
-  color: var(--gray);
-  line-height: 1.17;
-  margin-top: 10px;
-  margin-left: 40px;
-  padding-bottom: 4px;
-}
+
 .modal > p {
   font-size: 20px;
   font-weight: 700;
@@ -850,24 +819,42 @@ footer.instagram:hover {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  margin-bottom: 10px;
+  padding-left: 35px;
   margin-left: 0px;
-}
-.input-one:hover {
-  border-color: var(--blue);
+  outline: 0;
 }
 .input-one:focus {
-  /*nie działa*/
   border-color: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
+.input-one.focus {
+  outline: #2196f3;
+}
+.modal-form-one:hover svg {
+  fill: var(--blue);
+}
+
+.icons-svg {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+.icons-svg:hover {
+  fill: #2196f3;
+}
+
 .input-two {
   display: block;
   border: 1px solid rgba(33, 33, 33, 0.2);
   height: 40px;
   width: 448px;
   border-radius: 4px;
-  margin-bottom: 10px;
-  margin-left: 0px;
+  padding-left: 35px;
+  outline: 0;
+}
+.input-two:focus {
+  border: 1px solid var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
 .input-three {
   display: block;
@@ -875,30 +862,16 @@ footer.instagram:hover {
   width: 448px;
   height: 40px;
   border-radius: 4px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-}
-.textarea {
-  display: block;
+  padding-left: 35px;
+  outline: 0;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  width: 448px;
-  height: 120px;
-  border-radius: 4px;
-  margin-left: 0px;
 }
-.checkbox-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+
+.input-three:focus {
+  border-color: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
-.chceckbox-label p {
-  line-height: 1.71;
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: var(--gray);
-  margin-top: 20px;
-}
+
 .submit-modal-btn {
   margin-left: 164px;
   background-color: var(--blue);
@@ -907,5 +880,90 @@ footer.instagram:hover {
   border: 1px solid var(--blue);
   width: 200px;
   height: 50px;
-  margin-top: 30px;
+}
+.modal-form-one {
+  padding-left: 40px;
+  margin-top: 10px;
+}
+.modal-modal-form {
+  position: relative;
+  margin-top: 4px;
+}
+
+.textarea {
+  display: block;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  width: 448px;
+  height: 120px;
+  border-radius: 4px;
+  margin-left: 0px;
+  resize: none;
+  padding-left: 35px;
+  padding-top: 12px;
+  outline: 0;
+}
+.textarea:focus {
+  border-color: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
+}
+
+.textarea::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1, 16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.label {
+  font-size: 12px;
+  color: var(--gray);
+}
+.checkbox-input {
+  visibility: hidden;
+}
+.checkbox-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: var(--gray);
+  line-height: 1.71;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  position: relative;
+}
+.checkbox-input:hover svg {
+  /*ta klasa nie działa*/
+  /* fill: red; */
+}
+/*ta klasa działa*/
+/* .checkbox-label:hover svg {
+  fill: red;
+} */
+
+/*pozycja i kolory svg ustalone*/
+.check-svg {
+  position: absolute;
+  top: 2px;
+  left: 56px;
+  fill: transparent;
+
+  fill: var(--veryDark);
+}
+
+.checkbox-svg-one {
+  position: absolute;
+  top: 2px;
+  left: 57px;
+  opacity: 0;
+}
+.checkbox-input:checked + svg {
+  background-color: #2196f3;
+  fill: transparent;
+  border-radius: 2px;
+}
+.checkbox-input:checked + .checkbox-svg-one {
+  background-color: red;
 }
