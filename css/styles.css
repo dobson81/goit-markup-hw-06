@@ -827,12 +827,14 @@ footer.instagram:hover {
   border-color: var(--blue);
   transition: var(--transitionTime) var(--cubic);
 }
-.input-one.focus {
-  outline: #2196f3;
-}
-.modal-form-one:hover svg {
+.input-one:focus + svg {
   fill: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
+
+/* .modal-form-one:hover svg {
+  fill: var(--blue);
+} */
 
 .icons-svg {
   position: absolute;
@@ -856,6 +858,10 @@ footer.instagram:hover {
   border: 1px solid var(--blue);
   transition: var(--transitionTime) var(--cubic);
 }
+.input-two:focus + svg {
+  fill: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
+}
 .input-three {
   display: block;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -871,6 +877,10 @@ footer.instagram:hover {
   border-color: var(--blue);
   transition: var(--transitionTime) var(--cubic);
 }
+.input-three:focus + svg {
+  fill: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
+}
 
 .submit-modal-btn {
   margin-left: 164px;
@@ -880,6 +890,7 @@ footer.instagram:hover {
   border: 1px solid var(--blue);
   width: 200px;
   height: 50px;
+  outline: 0;
 }
 .modal-form-one {
   padding-left: 40px;
@@ -934,14 +945,6 @@ footer.instagram:hover {
   margin-bottom: 30px;
   position: relative;
 }
-.checkbox-input:hover svg {
-  /*ta klasa nie działa*/
-  /* fill: red; */
-}
-/*ta klasa działa*/
-/* .checkbox-label:hover svg {
-  fill: red;
-} */
 
 /*pozycja i kolory svg ustalone*/
 .check-svg {
@@ -965,5 +968,5 @@ footer.instagram:hover {
   border-radius: 2px;
 }
 .checkbox-input:checked + .checkbox-svg-one {
-  background-color: red;
+  fill: red;
 }
