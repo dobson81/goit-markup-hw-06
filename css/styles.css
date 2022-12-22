@@ -960,13 +960,10 @@ footer.instagram:hover {
   position: absolute;
   top: 2px;
   left: 57px;
-  opacity: 0;
+  opacity: 1;
 }
 .checkbox-input:checked + svg {
   background-color: #2196f3;
   fill: transparent;
   border-radius: 2px;
-}
-.checkbox-input:checked + .checkbox-svg-one {
-  fill: red;
 }
