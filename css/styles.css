@@ -273,6 +273,9 @@ body {
   height: 70px;
   bottom: 4px;
 }
+.what-we-do {
+  padding-top: 0;
+}
 .images-studio-top p {
   text-transform: uppercase;
   font-size: 14px;
@@ -829,7 +832,7 @@ footer.instagram:hover {
   text-align: center;
 }
 .input-one {
-  width: 448px;
+  width: 100%;
   display: block;
   height: 40px;
   border-radius: 4px;
@@ -860,7 +863,7 @@ footer.instagram:hover {
   display: block;
   border: 1px solid rgba(33, 33, 33, 0.2);
   height: 40px;
-  width: 448px;
+  width: 100%;
   border-radius: 4px;
   padding-left: 35px;
   outline: 0;
@@ -876,7 +879,7 @@ footer.instagram:hover {
 .input-three {
   display: block;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  width: 448px;
+  width: 100%;
   height: 40px;
   border-radius: 4px;
   padding-left: 35px;
@@ -910,17 +913,18 @@ footer.instagram:hover {
 .modal-modal-form {
   position: relative;
   margin-top: 4px;
+  padding-right: 40px;
 }
 
 .textarea {
   display: block;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  width: 448px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   margin-left: 0px;
   resize: none;
-  padding-left: 35px;
+  padding-left: 16px;
   padding-top: 12px;
   outline: 0;
 }
@@ -956,12 +960,17 @@ footer.instagram:hover {
   margin-bottom: 30px;
   position: relative;
 }
-
+.checkbox-label span {
+  cursor: pointer;
+}
+.checkbox-label a {
+  color: var(--blue);
+}
 /*pozycja i kolory svg ustalone*/
 .check-svg {
   position: absolute;
   top: 2px;
-  left: 56px;
+  left: 53px;
   fill: transparent;
 
   fill: var(--veryDark);
@@ -970,7 +979,7 @@ footer.instagram:hover {
 .checkbox-svg-one {
   position: absolute;
   top: 2px;
-  left: 58px;
+  left: 55px;
   opacity: 1;
 }
 .checkbox-input:checked + svg {
